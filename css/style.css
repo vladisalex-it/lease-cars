@@ -29,12 +29,24 @@ a {
     flex-direction: column;
 }
 
+.section-title {
+    margin-bottom: 50px;
+    font-size: 48px;
+    font-weight: 700;
+    text-align: center;
+}
+
+/* header */
 .header {
     background-color: #151515;
 }
-/* .header-main {
+.header-main {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
     background-color: transparent;
-} */
+}
 .container {
     max-width: 1220px;
     padding: 0 10px;
@@ -42,7 +54,7 @@ a {
 }
 .header__inner {
     padding-top: 40px;
-    padding-bottom: 40px;
+    padding-bottom: 45px;
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
@@ -59,9 +71,145 @@ a {
     margin-left: 35px;
 }
 
+/* top */
 
 .main {
     flex-grow: 1;
+}
+
+.top {
+    position: absolute;
+    z-index: 4;
+    left: 0;
+    right: 0;
+    padding-top: 250px;
+    padding-bottom: 50px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.title {
+    padding-bottom: 40px;
+    font-size: 96px;
+    font-weight: 700;
+}
+.top__link {
+    display: inline-block;
+    background-color: #151515;
+    padding: 23px;
+    max-width: 430px;
+    width: 100%;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 700;
+}
+
+.swiper::after {
+    content: '';
+    background-color: rgba(21, 21, 21, .3);
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+.swiper-wrapper {
+    background: rgba(21, 21, 21, .3);
+}
+.swiper-slide {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 15px;
+}
+.swiper-pagination-bullet  {
+    width: 120px;
+    height: 3px;
+    background-color: #151515;
+    border-radius: 0;
+    opacity: 1;
+}
+.swiper-pagination-bullet-active {
+    width: 120px;
+    height: 6px;
+    background-color: #ffffff;
+}
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+        bottom: 50px;
+}
+
+/* why-lease */
+.why-lease {
+    padding: 150px 0;
+}
+.why-lease__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+}
+.why-lease__item-img {
+    display: inline-block;
+    margin-bottom: 30px;
+}
+.why-lease__item-title {
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: 700;
+}
+.why-lease__item-text {
+    font-size: 16px;
+    text-align: left;
+}
+
+/* how-does */
+.how-does {
+    padding-bottom: 150px;
+}
+.how-does__inner {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.how-does__title {
+   margin-top: 50px;
+   font-size: 24px;
+   font-weight: 700; 
+}
+
+.how-does__list {
+    padding: 50px 0 70px;
+    counter-reset: myCounter;
+}
+.how-does__item {
+    width: 270px;
+    position: relative;
+    margin-left: auto;
+    box-sizing: content-box;
+    padding: 19px 0 19px 240px;
+    min-height: 63px;
+}
+.how-does__item::before {
+    counter-increment: myCounter;
+    content: counter(myCounter);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0066FF;
+    color: #ffffff;
+    font-size: 48px;
+    font-weight: 700;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.how-does__item + .how-does__item {
+    margin-top: 40px;
 }
 
 /* footer */
@@ -108,4 +256,45 @@ a {
     display: flex;
     justify-content: center;
     gap: 40px;
+}
+
+/* video */
+.video {
+    padding-bottom: 150px;
+    text-align: center;
+}
+.video__title {
+    margin-bottom: 20px;
+}
+.video__text {
+    margin-bottom: 50px;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
+.video__content {
+    display: block;
+    margin: 0 auto;
+}
+
+/* important */
+.important {
+    padding-bottom: 150px;
+}
+.important__title {
+    margin-bottom: 20px;
+}
+.important__text {
+    margin: 0 auto 50px;
+    width: 580px;
+}
+.important__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.important__item {
+    max-width: 270px;
+}
+.important__item-img {
+    margin-bottom: 20px;
 }
