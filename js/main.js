@@ -24,6 +24,14 @@
   })
 
 
+  const menuButton = document.querySelector('.menu__button')
+  const menuList = document.querySelector('.menu__list')
+
+  menuButton.addEventListener('click', () => {
+    menuList.classList.toggle('menu__list--active')
+  })
+
+
   const swiper = new Swiper(".swiper", {
     effect: "fade",
     autoplay: {
