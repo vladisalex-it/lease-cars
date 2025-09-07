@@ -385,6 +385,7 @@ a {
     font-weight: 400;
     font-size: 16px;
     margin: 0 auto;
+    border: none;
 }
 
 /* blog */
@@ -439,11 +440,10 @@ a {
     margin-bottom: 70px;
 }
 .tabs__btn {
-    padding: 0 150px;
+    padding: 0 150px 100px;
     display: flex;
     justify-content: space-between;
     gap: 80px;
-    padding-bottom: 100px;
 }
 .tabs__btn-item {
     font-size: 24px;
@@ -510,6 +510,9 @@ a {
     background-color: #fff;
     width: 100%;
 }
+.card__img {
+    width: 100%;
+}
 
 @media (max-width: 1180px) {
     .important__list {
@@ -520,6 +523,13 @@ a {
     }
     .important__item-img {
         width: 100%;
+    }
+    .tabs__btn {
+        padding: 0 0 50px;
+        gap: 20px;
+    }
+    .tabs__content-item {
+        grid-template-columns: repeat(3, 1fr);
     }
     
 }
@@ -543,6 +553,7 @@ a {
     .footer__menu-list {
         min-width: 0;
     }
+    
     
 }
 
@@ -582,7 +593,10 @@ a {
     .important__list {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+    .tabs__content-item {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 60px 25px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -610,8 +624,25 @@ a {
    }
 }
 
-@media (max-width: 610px) {
-    .important__text {
+@media (max-width: 650px) {
+    .tabs__btn-item {
+        font-size: 18px;
+    }
+    .tabs__content-item {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 60px 25px;
+    }
+    .blog__inner {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .contacts {
+        padding: 50px 0;
+    }
+    .contacts__text {
+        padding: 0;
+    }
+    .form__input {
+        margin-bottom: 30px;
         width: 100%;
     }
 }
@@ -629,6 +660,9 @@ a {
     }
     .swiper-pagination-bullet {
         width: 35px;
+    }
+    .why-lease {
+        padding: 50px 0px;
     }
    .why-lease__list {
         grid-template-columns: repeat(1, 1fr);
@@ -668,6 +702,9 @@ a {
     .important__list {
         grid-template-columns: repeat(1, 1fr);
     }
+    .footer__menu {
+        gap: 35px 20;
+    }
     .copy__nav-list,
     .app {
         flex-direction: column;
@@ -675,5 +712,24 @@ a {
     }
     .copy__nav-list {
         gap: 20px;
+    }
+    .choose {
+        padding: 50px 0;
+    }
+    .tabs__content-item {
+        gap: 40px;
+    }
+    .tabs__btn {
+        flex-direction: column;
+    }
+    .blog {
+        padding-bottom: 50px;
+    }
+    .blog__inner {
+        margin-bottom: 35px;
+    }
+    .blog__item-link {
+        margin-top: 10px;
+        margin-left: auto;
     }
 }
