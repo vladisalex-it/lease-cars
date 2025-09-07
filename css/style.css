@@ -699,6 +699,12 @@ a {
     .video__content {
         height: 250px;
     }
+    .important {
+        padding-bottom: 50px;
+    }
+    .important__text {
+        width: 100%;
+    }
     .important__list {
         grid-template-columns: repeat(1, 1fr);
     }
